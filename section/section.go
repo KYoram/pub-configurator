@@ -2,8 +2,8 @@ package section
 
 import (
 	"github.com/AllenDang/giu"
-	"github.com/KYoram/pub-configurator/consumables"
-	"github.com/KYoram/pub-configurator/general"
+	"github.com/LeRoiDesPoissons/pub-configurator/consumables"
+	"github.com/LeRoiDesPoissons/pub-configurator/general"
 )
 
 type Section int

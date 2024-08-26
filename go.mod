@@ -1,4 +1,4 @@
-module github.com/KYoram/pub-configurator
+module github.com/LeRoiDesPoissons/pub-configurator
 
 go 1.23.0
 

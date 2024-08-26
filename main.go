@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/AllenDang/giu"
-	"github.com/KYoram/pub-configurator/config"
-	"github.com/KYoram/pub-configurator/section"
+	"github.com/LeRoiDesPoissons/pub-configurator/config"
+	"github.com/LeRoiDesPoissons/pub-configurator/section"
 )
 
 var (
