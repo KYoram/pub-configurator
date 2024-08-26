@@ -1,1 +1,16 @@
-# pub-configurator
+# Pub Configurator
+
+## Resources
+
+- [GIU Wiki](https://github.com/AllenDang/giu/wiki)
+
+## Prepare to run
+
+Follow installation steps for [giu](https://github.com/AllenDang/giu?tab=readme-ov-file#install)  
+Make sure to add to PATH with admin priviliges ;)
+
+## Build
+
+```CMD
+go build -ldflags "-s -w -H=windowsgui -extldflags=-static" .
+```
