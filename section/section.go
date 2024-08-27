@@ -22,15 +22,17 @@ func SetSection(s Section) {
 }
 
 func SelectedLayout() giu.Layout {
-	layout := giu.Layout{
-		giu.Label("Unknown section"),
-	}
+	var layout giu.Layout
 
 	switch SelectedSection {
 	case GeneralSection:
 		layout = general.GeneralLayout
 	case ConsumablesSection:
 		layout = consumables.ConsumablesLayout
+	default:
+		layout = giu.Layout{
+			giu.Label("Create a new or open a config file to start"),
+		}
 	}
 
 	return layout

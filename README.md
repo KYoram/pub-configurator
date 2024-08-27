@@ -3,6 +3,7 @@
 ## Resources
 
 - [GIU Wiki](https://github.com/AllenDang/giu/wiki)
+- [Zenity Docs](https://github.com/ncruces/zenity)
 
 ## Prepare to run
 
