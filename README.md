@@ -10,8 +10,8 @@
 Follow installation steps for [giu](https://github.com/AllenDang/giu?tab=readme-ov-file#install)  
 Make sure to add to PATH with admin priviliges ;)
 
-## Build
+## Flags
 
 ```CMD
-go build -ldflags "-s -w -H=windowsgui -extldflags=-static" .
+-ldflags "-s -w -H=windowsgui -extldflags=-static"
 ```

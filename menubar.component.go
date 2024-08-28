@@ -5,29 +5,32 @@ import (
 	"github.com/LeRoiDesPoissons/pub-configurator/config"
 )
 
-var menubar = giu.MenuBar().Layout(
-	giu.MenuItem("New").Shortcut("Ctrl+N").OnClick(func() {
-		if Filthy {
-			// handle filty
-		}
+func generateMenuBar() *giu.MenuBarWidget {
+	return giu.MenuBar().Layout(
+		giu.MenuItem("New").Shortcut("Ctrl+N").OnClick(func() {
+			if Filthy {
+				// handle filty
+			}
 
-		Config = config.GenerateConfig()
-		ReflectConfig = Config
-	}),
-	giu.MenuItem("Open").Shortcut("Ctrl+O").OnClick(func() {
-		if Filthy {
-			// handle filthy
-		}
+			Config = config.GenerateConfig()
+			ReflectConfig = Config
+		}),
+		giu.MenuItem("Open").Shortcut("Ctrl+O").OnClick(func() {
+			if Filthy {
+				// handle filthy
+			}
 
-		result, err := config.OpenConfig()
+			loadedConfig, err := config.OpenConfig()
 
-		if err != nil {
-			// handle err
-		}
+			if err != nil {
+				// handle err
+			}
 
-		Config = result
-		ReflectConfig = Config
-	}),
-	giu.MenuItem("Save").Shortcut("Ctrl+S"),
-	giu.MenuItem("Save as..."),
-)
+			Config = loadedConfig
+			ReflectConfig = Config
+		}),
+		giu.MenuItem("Save").Shortcut("Ctrl+S"),
+		giu.MenuItem("Save as..."),
+	)
+
+}

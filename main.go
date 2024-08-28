@@ -5,11 +5,11 @@ import (
 	"github.com/LeRoiDesPoissons/pub-configurator/section"
 )
 
-var window = giu.SingleWindowWithMenuBar()
-
 func loop() {
+	var window = giu.SingleWindowWithMenuBar()
+
 	window.Layout(
-		menubar,
+		generateMenuBar(),
 		giu.SplitLayout(
 			giu.DirectionVertical,
 			&pos,

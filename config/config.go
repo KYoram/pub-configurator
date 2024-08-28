@@ -2,6 +2,7 @@ package config
 
 import (
 	"encoding/json"
+	"os"
 
 	"github.com/ncruces/zenity"
 )
@@ -15,19 +16,26 @@ type Config struct {
 func OpenConfig() (Config, error) {
 	var message Config
 
-	result, err := zenity.SelectFile(
+	fileName, err := zenity.SelectFile(
 		zenity.Filename(""),
 		zenity.FileFilters{
 			{
 				Name:     "Pub config files (.json)",
 				Patterns: []string{"*.json"},
-				CaseFold: false,
 			},
 		})
 
-	if err == nil {
-		err = json.Unmarshal([]byte(result), &message)
+	if err != nil {
+		return Config{}, err
 	}
+
+	content, err := os.ReadFile(fileName)
+
+	if err != nil {
+		return Config{}, err
+	}
+
+	err = json.Unmarshal(content, &message)
 
 	return message, err
 }
